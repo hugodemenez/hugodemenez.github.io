@@ -2,92 +2,113 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
   </head>
-  <body>
-    <header style="background-position: 50% -125px;">
-      <div class="section_overlay">
-        <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+  <body>       
+    <div class="container">
+      <div class="navbar">
+        <a href="#HOME">HOME</a>
+        <a href="#ABOUT">ABOUT</a>
+        <a href="#STATS">STATS</a>
+        <a href="#WORK">WORK</a>
+        <a href="#Progress">Progress</a>
+      </div> 
+      <section id="HOME">
+          <h1  align="center">
+            Welcome <img src="assets/Hi.gif" width="29px">
+          </h1>  
+          <p align="center">
+            <a href="https://www.linkedin.com/in/hugo-demenez-6b017217a/" target="blank">
+              <img align="center" src="assets/linkedin.svg" alt="hugodemenez" height="32" width="32" />
+            </a>&nbsp;
+            <a href="https://github.com/hugodemenez" target="blank">
+              <img align="center" src="assets/GitHub-Mark.png" alt="hugodemenez" height="32" width="32" />
+            </a>
+          </p>
+
+          <p align="center">
+            <img src="assets/gif.gif" alt="coding" width="50%" class="image1"/>
+          </p>
+      </section>
+    
+      <section id="ABOUT">
+        <h1 align="center">
+          About Me
+        </h1>
+        <hr class="striped-border">
+        <p align="center">
+          <li align="center">I am working on trading bots for kraken,coinbasepro, binance, etc...  </li> 
+          <br>
+            <li align="center">I mainly code in : <a href="https://www.python.org/" target="blank"><img src="assets/python_256x256.png" alt="python" height="24" width="24" /></a>&nbsp; </li> 
+          <br>
+          <li align="center"> but I also work with :<img src="assets/c_256x256.png" alt="c" width="24" height="24"/> <img src="assets/php_256x256.png" alt="php" width="24" height="24"/> <img src="assets/azure.svg" alt="azure" width="24" height="24"/> </li>
+        </p>
+      </section>
+
+      <section id="STATS">
+        <h1 align="center">
+          My Stats
+        </h1>
+
+        <hr class="striped-border">
+
+        <p align="center">
+          <img src="https://github-readme-stats.vercel.app/api?username=hugodemenez&show_icons=true&title_color=2c3e50&icon_color=2c3e50&text_color=2c3e50&bg_color=ffffff&hide=["stars"]" alt="data" width="30%"/>
+        </p>
+      </section>
+
+      <section id="WORK">
+        <h1 align="center">
+          I am currently working on :
+        </h1>
+
+        <hr class="striped-border">
+
+        <p align="center">
+          <a align="center" href="https://github.com/hugodemenez/EasyTrading" title="EasyTrading"><img align="center" width="30%" src="https://github-readme-stats.vercel.app/api/pin/?username=hugodemenez&repo=EasyTrading&title_color=2c3e50&icon_color=2c3e50&text_color=2c3e50&bg_color=ffffff"></a>
+        </p>
+      </section>
+
+      <section id="Progress">
+        <div class="row">
+          <div class="col-md-4  wow fadeInLeft animated">
+            <div class="single_progress_bar">
+              <h2>PYTHON - 85%</h2>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                    <span class="sr-only">60% Complete</span>
+                  </div>
+                </div>
+              </div>
+                <div class="single_progress_bar">
+                  <h2>HTML - 45%</h2>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                        <span class="sr-only">60% Complete</span>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="single_progress_bar">
+                      <h2>C - 75%</h2>
+                      <div class="progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="single_progress_bar">
+                        <h2>PHP - 15%</h2>
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 15%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#HOME">Home</a></li>
-                <li><a href="#ABOUT">About</a></li>
-                <li><a href="#Stats">My Stats</a></li>
-                <li><a href="#WORK">Work</a></li>
-                <li><a href="#CONTACT">Contact</a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container -->
-        </nav>           
-      </div>           
-    </header>
-
-    <section id="HOME">
-      <h1  align="center">
-        Welcome <img src="assets/Hi.gif" width="29px">
-      </h1>  
-
-      <p align="center">
-        <a href="https://www.linkedin.com/in/hugo-demenez-6b017217a/" target="blank">
-          <img align="center" src="assets/linkedin.svg" alt="hugodemenez" height="32" width="32" /></a>&nbsp;
-        <a href="https://github.com/hugodemenez" target="blank">
-          <img align="center" src="assets/GitHub-Mark.png" alt="hugodemenez" height="32" width="32" /></a>
-      </p>
-
-      <p align="center">
-        <img src="assets/gif.gif" alt="coding" width="15%" class="image1"/>
-      </p>
-    </section>
-
-    <section id="ABOUT">
-      <h1 align="center">
-        About Me
-      </h1>
-      <hr class="striped-border">
-      <p align="center">
-        <li align="center">I am working on trading bots for kraken,coinbasepro, binance, etc...  </li> 
-        <br>
-          <li align="center">I mainly code in : <a href="https://www.python.org/" target="blank"><img src="assets/python_256x256.png" alt="python" height="24" width="24" /></a>&nbsp; </li> 
-        <br>
-        <li align="center"> but I also work with :<img src="assets/c_256x256.png" alt="c" width="24" height="24"/> <img src="assets/php_256x256.png" alt="php" width="24" height="24"/> <img src="assets/azure.svg" alt="azure" width="24" height="24"/> </li>
-      </p>
-    </section>
-
-    <section id="Stats">
-      <h1 align="center">
-        My Stats
-      </h1>
-
-      <hr class="striped-border">
-
-      <p align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=hugodemenez&show_icons=true&title_color=2c3e50&icon_color=2c3e50&text_color=2c3e50&bg_color=ffffff&hide=["stars"]" alt="data" width="30%"/>
-      </p>
-    </section>
-
-    <section id="WORK">
-      <h1 align="center">
-        I am currently working on :
-      </h1>
-
-      <hr class="striped-border">
-
-      <p align="center">
-        <a align="center" href="https://github.com/hugodemenez/EasyTrading" title="EasyTrading"><img align="center" width="30%" src="https://github-readme-stats.vercel.app/api/pin/?username=hugodemenez&repo=EasyTrading&title_color=2c3e50&icon_color=2c3e50&text_color=2c3e50&bg_color=ffffff"></a>
-      </p>
-    </section>
+          </div>
+      </section>
+    </div>
   </body>
 </html>

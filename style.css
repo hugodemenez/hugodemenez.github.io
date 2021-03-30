@@ -25,7 +25,7 @@ width: 100%;
 
 }
 section#ABOUT li{
-color: rgb(255, 255, 255);
+color: #ecf0f1;
 }
 section#STATS {
 display: flex;
@@ -43,34 +43,36 @@ width: 100%;
 }
 section#CONTACT a{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
-    color: aliceblue;
-    font-size:32px
+    color:#ecf0f1;
+    font-size:32px;
+    position: relative
+
     }
 h1 {
-color: rgb(228, 228, 228);
+color: #ecf0f1;
 font-family: verdana;
 font-size: 24px;
 }
 
 h1.title {
-  color: rgb(228, 228, 228);
+  color: #ecf0f1;
 font-family: verdana;
 font-size: 70px;
 }
 
 p  {
-color: rgb(228, 228, 228);
+color: #ecf0f1;
 font-family: verdana;
 font-size: 16px;
 text-align: left;
 justify-content: left;
 }
 p li{
-color: rgb(255, 255, 255);
+color: #ecf0f1;
 font-family: verdana;
 font-size: 16px;
 text-align: left;
@@ -88,13 +90,13 @@ z-index:1;
 position: fixed;
 top: 0;
 width: 100%;
-font-family: verdana;
 justify-content: right;
-text-align: center;
 }
 
 #examples a {
-    color: rgb(255, 255, 255)
+    color:#ecf0f1;
+    font-family: verdana;
+    font-weight: bolder;
 }
 #examples .example {
 display: flex;

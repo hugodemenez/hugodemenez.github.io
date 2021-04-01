@@ -49,8 +49,8 @@ section#CONTACT a{
     width: 100%;
     color:#ecf0f1;
     font-size:32px;
-    position: relative
-
+    position: relative;
+    text-decoration: none;
     }
 h1 {
 color: #ecf0f1;
@@ -89,6 +89,7 @@ margin: 0 auto 0px;
 z-index:1;
 position: fixed;
 top: 0;
+right: 15px;
 width: 100%;
 justify-content: right;
 }
@@ -107,7 +108,6 @@ font-size: 16px;
 
 }
 #examples .example .hover {
-
 text-align: center;
 margin: 2px auto;
 padding: 5px;

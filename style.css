@@ -3,6 +3,7 @@
 html{
   scroll-behavior: smooth;
   font-family: Karla;
+  font-size:16px;
 }
 body{
   background-image: radial-gradient(circle at center center, transparent,rgb(255,255,255)),repeating-linear-gradient(135deg, rgb(255,255,255) 0px, rgb(255,255,255) 12px,transparent 12px, transparent 19px,rgb(255,255,255) 19px, rgb(255,255,255) 24px,transparent 24px, transparent 28px),repeating-linear-gradient(45deg, rgb(245,245,245) 0px, rgb(245,245,245) 7px,transparent 7px, transparent 14px),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
@@ -28,6 +29,7 @@ section#ABOUT{
     color:#17181c;
     position: relative;
     text-decoration: none;
+    font-size:1em;
 }
 section#STATS {
 display: flex;
@@ -53,21 +55,22 @@ section#CONTACT a,section#ABOUT a{
     position: relative;
     text-decoration: none;
     padding-top: 1em;
+
     }
 section#CONTACT a i,section#ABOUT a i{
-padding-right: 1vw;
-padding-left: 1vw;
+padding-right: 0.5vw;
+padding-left: 0.5vw;
   }
 section#CONTACT a:hover,section#ABOUT a:hover {
       opacity : 0.5
     }
 h1 {
 color: #17181c;
-font-size: 24px;
+font-size: 2em;
 }
 p  {
 color: #17181c;
-font-size: 16px;
+font-size: 5em;
 text-align: left;
 justify-content: left;
 }

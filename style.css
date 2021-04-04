@@ -5,7 +5,7 @@ html{
   font-family: Karla;
 }
 body{
-  background-color: #17181c;
+  background-image: radial-gradient(circle at center center, transparent,rgb(255,255,255)),repeating-linear-gradient(135deg, rgb(255,255,255) 0px, rgb(255,255,255) 12px,transparent 12px, transparent 19px,rgb(255,255,255) 19px, rgb(255,255,255) 24px,transparent 24px, transparent 28px),repeating-linear-gradient(45deg, rgb(245,245,245) 0px, rgb(245,245,245) 7px,transparent 7px, transparent 14px),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
 }
 
 section#HOME{
@@ -19,15 +19,15 @@ height: 10vh;
 section#HOME h1{
   font-size:70px;
 }
-section#ABOUT {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
-}
-section#ABOUT li{
-color: #ecf0f1;
+section#ABOUT{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color:#17181c;
+    position: relative;
+    text-decoration: none;
 }
 section#STATS {
 display: flex;
@@ -43,26 +43,30 @@ align-items: center;
 justify-content: center;
 width: 100%;
 }
-section#CONTACT a{
+section#CONTACT a,section#ABOUT a{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
-    color:#ecf0f1;
+    color:#17181c;
     position: relative;
     text-decoration: none;
     padding-top: 1em;
     }
-section#CONTACT a:hover {
+section#CONTACT a i,section#ABOUT a i{
+padding-right: 1vw;
+padding-left: 1vw;
+  }
+section#CONTACT a:hover,section#ABOUT a:hover {
       opacity : 0.5
     }
 h1 {
-color: #ecf0f1;
+color: #17181c;
 font-size: 24px;
 }
 p  {
-color: #ecf0f1;
+color: #17181c;
 font-size: 16px;
 text-align: left;
 justify-content: left;
@@ -85,7 +89,7 @@ justify-content: right;
 }
 
 #examples a {
-    color:#ecf0f1;
+    color:#17181c;
     font-weight: bolder;
 }
 #examples .example {
@@ -114,7 +118,7 @@ margin: 5px 0 0;
 transition: all 0.1s ease-in-out;
 transition-duration: 0.5s;
 opacity: 0;
-background-color: #ffffff;
+background-color: #17181c;
 }
 #examples .example .hover.hover-1:before, #examples .example .hover.hover-1:after {
 left: 0;

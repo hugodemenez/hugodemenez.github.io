@@ -1,20 +1,23 @@
+@font-face { font-family: Karla; src: url('Karla-Regular.ttf'); } 
 
 html{
   scroll-behavior: smooth;
-  font-family: Verdana;
+  font-family: Karla;
 }
 body{
   background-color: #17181c;
 }
 
-section#HOME {
+section#HOME{
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 width: 100%;
-height: 15vh;
-
+height: 10vh;
+}
+section#HOME h1{
+  font-size:70px;
 }
 section#ABOUT {
 display: flex;
@@ -22,7 +25,6 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 width: 100%;
-
 }
 section#ABOUT li{
 color: #ecf0f1;
@@ -32,7 +34,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-width: 100%;
+width: 100vw;
 }
 section#WORK {
 display: flex;
@@ -48,36 +50,24 @@ section#CONTACT a{
     justify-content: center;
     width: 100%;
     color:#ecf0f1;
-    font-size:32px;
     position: relative;
     text-decoration: none;
+    padding-top: 1em;
+    }
+section#CONTACT a:hover {
+      opacity : 0.5
     }
 h1 {
 color: #ecf0f1;
-font-family: verdana;
 font-size: 24px;
 }
-
-h1.title {
-  color: #ecf0f1;
-font-family: verdana;
-font-size: 70px;
-}
-
 p  {
 color: #ecf0f1;
-font-family: verdana;
 font-size: 16px;
 text-align: left;
 justify-content: left;
 }
-p li{
-color: #ecf0f1;
-font-family: verdana;
-font-size: 16px;
-text-align: left;
-justify-content: left;
-}
+
 /** Hover-related CSS **/
 #examples {
 display: flex;
@@ -96,7 +86,6 @@ justify-content: right;
 
 #examples a {
     color:#ecf0f1;
-    font-family: verdana;
     font-weight: bolder;
 }
 #examples .example {
@@ -131,13 +120,7 @@ background-color: #ffffff;
 left: 0;
 }
 
-#examples .example:hover {
-cursor: pointer;
-}
 #examples .example:hover .hover:before, #examples .example:hover .hover:after {
 width: 100%;
 opacity: 1;
-}
-#examples .example:hover .hover.hover-3:before, #examples .example:hover .hover.hover-3:after, #examples .example:hover .hover.hover-4:before, #examples .example:hover .hover.hover-4:after {
-width: 50%;
 }

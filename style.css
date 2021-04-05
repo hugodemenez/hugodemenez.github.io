@@ -79,13 +79,13 @@ justify-content: left;
 
 #menuToggle
 {
-  display: block;
-  position: relative;
+  display:block;
+  position: fixed;
   top: 50px;
   left: 50px;
   
   z-index: 1;
-  
+
   -webkit-user-select: none;
   user-select: none;
 }

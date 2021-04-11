@@ -9,39 +9,20 @@ body{
   background-image: radial-gradient(circle at center center, transparent,rgb(255,255,255)),repeating-linear-gradient(135deg, rgb(255,255,255) 0px, rgb(255,255,255) 12px,transparent 12px, transparent 19px,rgb(255,255,255) 19px, rgb(255,255,255) 24px,transparent 24px, transparent 28px),repeating-linear-gradient(45deg, rgb(245,245,245) 0px, rgb(245,245,245) 7px,transparent 7px, transparent 14px),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
 }
 
-section#HOME{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
-height: 10vh;
-}
+
 section#HOME h1{
+  height: 10vh;
   font-size:70px;
 }
-section#ABOUT{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color:#17181c;
-    text-decoration: none;
-    font-size:1em;
-}
-section#STATS {
+
+section#STATS,section#WORK,section#ABOUT,section#HOME {
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 width: 100vw;
 }
-section#WORK {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
-}
+
 section#CONTACT a,section#ABOUT a{
     display: flex;
     flex-direction: row;

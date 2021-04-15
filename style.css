@@ -1,7 +1,7 @@
 @font-face { font-family: Karla; src: url('Karla-Regular.ttf'); } 
 
 html{
-  scroll-behavior: smooth;
+  scroll-behavior:auto;
   font-family: Karla;
   font-size:16px;
 }
@@ -21,7 +21,12 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 width: 100vw;
+height: 100vh;
 }
+section#ABOUT li {
+  padding-top: 20px;
+}
+
 
 section#CONTACT a,section#ABOUT a{
     display: flex;
@@ -33,7 +38,6 @@ section#CONTACT a,section#ABOUT a{
     position: relative;
     text-decoration: none;
     padding-top: 1em;
-
     }
 section#CONTACT a i,section#ABOUT a i{
 padding-right: 0.5vw;
@@ -54,12 +58,11 @@ justify-content: left;
 }
 
 
-
 #menuToggle
 {
   display:block;
   position: fixed;
-  top: 50px;
+  top: 2vh;
   left: 50px;
   
   z-index: 1;
@@ -99,6 +102,7 @@ justify-content: left;
  */
 #menuToggle span
 {
+  text-align: center;
   display: block;
   width: 33px;
   height: 4px;
@@ -161,7 +165,6 @@ justify-content: left;
  */
 #menu
 {
-  position: fixed;
   width: 50px;
   height: 100vh;
   margin: -100px 0 0 -50px;
@@ -178,6 +181,7 @@ justify-content: left;
 
 #menu a
 {
+  
   padding: 10px 0;
   font-size: 20px;
 }

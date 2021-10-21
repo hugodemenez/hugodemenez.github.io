@@ -1,87 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animate.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/ed342dc3ca.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-  </head>
-  <header class="header">
-    <nav role="navigation">
-      <div id="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-          <a href="#HOME">Home</a>
-          <a href="#ABOUT">About</a>
-          <a href="#STATS">Stats</a>
-          <a href="#WORK">Work</a>
-          <a href="mailto:hdemenez@hotmail.fr?subject=Contact from your website&cc=hugo.demenez@student.junia.com&body=Enter your question here :">Contact</a>
-          <a href="https://www.linkedin.com/in/hugo-demenez-6b017217a/" alt="hugodemenez"><i class="fab fa-linkedin fa-2x"></i></a>
-          <a href="https://github.com/hugodemenez" alt="hugodemenez"> <i class="fab fa-github fa-2x"></i></a>   
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <body >    
-      <section class="animate__animated animate__swing" id="HOME">
-          <h1>
-            Welcome <img src="assets/Hi.gif" width="29px">
-          </h1>  
-      </section>
-
-      <section class="animate__animated animate__bounceInLeft animate__delay-1s"id="ABOUT">
-        <h1 >
-          About Me
-        </h1>
-          <li>I am working on trading bots for kraken,coinbasepro, binance, etc... </li> 
-          <a href="https://www.python.org/" alt="python"><li> I mainly code in :</li><i class="fab fa-python fa-2x"></i></a>
-          <li> but I also work with :<i class="fab fa-html5 fa-2x"></i><i class="fab fa-php fa-2x"></i><i class="fab fa-java fa-2x"></i><i class="fab fa-btc fa-2x"></i><i class="fab fa-ethereum fa-2x"></i></li>
-      </section>
-
-      <section class="animate__animated animate__bounceInRight animate__delay-2s" id="STATS">
-        <h1>
-          My Stats
-        </h1>
-          <img  src="https://github-readme-stats.vercel.app/api?username=hugodemenez&show_icons=true&title_color=17181c&icon_color=17181c&text_color=17181c&bg_color=fff" alt="data"/>
-      </section>
-
-      <section class="animate__animated animate__bounceInLeft animate__delay-3s" id="WORK">
-        <h1 align="center">
-          I am currently working on :
-        </h1>
-        
-        <a class="item" href="https://github.com/hugodemenez/EasyTrading" title="EasyTrading"><img width="100%" src="https://github-readme-stats.vercel.app/api/pin/?username=hugodemenez&repo=EasyTrading&title_color=17181c&icon_color=17181c&text_color=17181c&bg_color=fff"></a>
-      </section>
+<html lang="fr" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hugo Demenez</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./indexContent.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header"> 
+      <a href="./index.html">Accueil</a>
+      <a href="./presentation.html">Presentation</a>
+      <a href="./cv.html">CV</a>
     </div>
-  </body>
+    <div class="row1">
+      <div class="content">
+        <div class="name">
+        <h1 class="name">Demenez</h1>
+        </div>
+        <div class="surname">
+        <h1 class="surname">Hugo</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer>
+  <h1>
+    Contact
+  </h1>
+  <h2>
+    Adresse
+    <h3>
+      27 rue jean jaurès
+    </h3>
+  </h2>
+</footer>
 </html>

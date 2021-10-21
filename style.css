@@ -1,197 +1,29 @@
-@font-face { font-family: Karla; src: url('Karla-Regular.ttf'); } 
-
-html{
-  scroll-behavior:auto;
-  font-family: Karla;
-  font-size:16px;
-}
 body{
-  background-image: radial-gradient(circle at center center, transparent,rgb(255,255,255)),repeating-linear-gradient(135deg, rgb(255,255,255) 0px, rgb(255,255,255) 12px,transparent 12px, transparent 19px,rgb(255,255,255) 19px, rgb(255,255,255) 24px,transparent 24px, transparent 28px),repeating-linear-gradient(45deg, rgb(245,245,245) 0px, rgb(245,245,245) 7px,transparent 7px, transparent 14px),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
+    background-color: #fff;
+    font-family: Verdana;
 }
 
-
-section#HOME h1{
-  height: 10vh;
-  font-size:70px;
+.header{ 
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    height: 25px;
+    font-size: 18px; 
 }
 
-section#STATS,section#WORK,section#ABOUT,section#HOME {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100vw;
-height: 100vh;
-}
-section#ABOUT li {
-  padding-top: 20px;
-}
-
-
-section#CONTACT a,section#ABOUT a{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    color:#17181c;
-    position: relative;
+a:link, a:visited{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #888;
     text-decoration: none;
-    padding-top: 1em;
-    }
-section#CONTACT a i,section#ABOUT a i{
-padding-right: 0.5vw;
-padding-left: 0.5vw;
-  }
-section#CONTACT a:hover,section#ABOUT a:hover {
-      opacity : 0.5
-    }
-h1 {
-color: #17181c;
-font-size: 2em;
-}
-p  {
-color: #17181c;
-font-size: 5em;
-text-align: left;
-justify-content: left;
+    margin: 25px;
 }
 
-
-#menuToggle
-{
-  display:block;
-  position: fixed;
-  top: 2vh;
-  left: 50px;
-  
-  z-index: 1;
-
-  -webkit-user-select: none;
-  user-select: none;
+a:hover{
+    color: #000;
+    transition: 1s;
 }
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
+footer{
+    position: relative;
 }
-
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  text-align: center;
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  width: 50px;
-  height: 100vh;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu a
-{
-  
-  padding: 10px 0;
-  font-size: 20px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
-

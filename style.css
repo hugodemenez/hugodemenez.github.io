@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 20px;
+    text-align: justify;
+}
+
+.title{
+    font-family:'Times New Roman', Times, serif;
+    grid-column: 2 / 6;
+
+}
+
+.hamburger{
+    display:none;
+}
+
+.caroussel{
+    margin-top:5rem;
+    margin-bottom: 5rem;
+    display:flex;
+    flex-direction: row;
+    gap:2.5rem;
+    overflow-x: scroll;
+}
+
+.caroussel img:hover{
+    display:none;
+}
+
+
+.content{
+    font-family: 'Inter', serif;
+    grid-column: 2 / 6;
+    font-size: small;
+    color:lightgray;
+}
+
+.cta{
+    text-decoration: none;
+    border:none;
+    background:black;
+    color:white;
+    font-family:'Times New Roman', Times, serif;
+    padding: 1em;
+    width:10rem;
+    border-radius: 12px;
+}

@@ -10,9 +10,10 @@ document.addEventListener('scroll', (event) => {
     if(index-1>=0 && content.children[index-1].className!=="cta"){
         content.children[index-1].style.color = "lightgray"
     }
-    if(index+1<=content.children.length-1 && content.children[index-1].className!=="cta"){
+    if(index+1<=content.children.length-1 && content.children[index+1].className!=="cta"){
         content.children[index+1].style.color = "lightgray"
     }
-    content.children[index].style.color = "black"
-    
+    if(content.children[index].className!=="cta"){
+        content.children[index].style.color = "black"
+    }
 })

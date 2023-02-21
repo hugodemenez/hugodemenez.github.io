@@ -2,15 +2,15 @@
 
 body{
     display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(15,1fr);
+    grid-gap: 10px;
     text-align: justify;
 }
 
 .title{
     font-family:'Times New Roman', Times, serif;
-    grid-column: 2 / 6;
-
+    grid-column: 2 / 15;
+    color:black;
 }
 
 .hamburger{
@@ -35,9 +35,17 @@ body{
 
 .content{
     font-family: 'Inter', serif;
-    grid-column: 2 / 6;
-    font-size: small;
+    grid-column: 2 / 15;
+    font-size:medium;
     color:lightgray;
+}
+
+.ctaContainer{
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+    width:100%;
+    overflow:hidden;
 }
 
 .cta{
@@ -49,4 +57,28 @@ body{
     padding: 1em;
     width:10rem;
     border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.number{
+    border:none;
+    background:lightgray;
+    padding: 1em;
+    border-radius: 12px;
+    width:100%;
+    display:none;
+}
+
+.open_animation{
+    display:flex;
+    flex-shrink: 3;
+    animation-name: open;
+    animation-duration: 4s ;
+}
+
+
+/* The animation code */
+@keyframes open {
+    from {width: 0%;}
+    to {width: 80%;}
 }

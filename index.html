@@ -11,7 +11,6 @@
     
 </head>
 <body>
-
     <div class="content" id="content">
         <header>
             <div class="title">
@@ -35,9 +34,15 @@
             <img src="./image.png" alt="project" id="project5">
         </div>
         <p>La loi Pinel fait partie des lois incitatives à l’investissement locatif.</p>
-        <button class="cta">
-            Contactez-nous
-        </button>
+        
+        <div class="ctaContainer">
+            <button class="cta" id="cta" onclick=showNumberField()>
+                Contactez-nous
+            </button>
+            <input class="number" id="number" type="number" placeholder="Entrez votre numéro">
+            </input>
+        </div>
+
         <h1>
             Quels sont les avantages de la loi Pinel ?
         </h1>

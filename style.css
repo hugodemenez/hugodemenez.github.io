@@ -73,12 +73,12 @@ body{
     display:flex;
     flex-shrink: 3;
     animation-name: open;
-    animation-duration: 4s ;
+    animation-duration: 1s ;
 }
 
 
 /* The animation code */
 @keyframes open {
     from {width: 0%;}
-    to {width: 80%;}
+    to {width: 100%;}
 }

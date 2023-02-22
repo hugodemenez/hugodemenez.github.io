@@ -18,7 +18,7 @@ body{
 }
 
 .caroussel{
-
+    scroll-behavior: smooth;
     display:flex;
     flex-direction: row;
     gap:1rem;
@@ -37,6 +37,9 @@ body{
     font-family: 'Inter', serif;
     grid-column: 2 / 15;
     font-size:medium;
+}
+
+.readingHighlight{
     color:lightgray;
 }
 

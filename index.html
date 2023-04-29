@@ -34,12 +34,26 @@
         </div>
         <p>La loi Pinel fait partie des lois incitatives à l’investissement locatif.</p>
         
-        <div class="ctaContainer">
-            <button class="cta" id="cta" onclick=showNumberField()>
-                Contactez-nous
-            </button>
-            <input class="number" id="number" type="number" placeholder="Entrez votre numéro">
-            </input>
+        <div class="chat">
+            <div class="discussion">
+                <div class="question">
+                    <p>Bonjour, pouvez-vous m'aider, s'il vous plait ?</p>
+                </div>
+                <div class="answer">
+                    <p>Bonjour ! Bien sûr, je suis là pour vous aider. De quoi avez-vous besoin ?</p>
+                </div>
+                <div class="question">
+                    <p>D'aide pour remplir ma déclaration d'impôt</p>
+                </div>
+            </div>
+            <div class="send-message">
+                <textarea class="text-input" type="text" placeholder="Posez vos questions à notre expert" rows="1"></textarea>
+                <button class="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10V19H10Z" />
+                    </svg>
+                </button>
+            </div>
         </div>
         <div class="readingHighlight" id="readingHighlight">
             <h1>
@@ -70,10 +84,15 @@
                 Investir dans l’immobilier locatif, c’est aussi un moyen de préparer sa retraite en se constituant un patrimoine et en prévoyant une rentrée d’argent mensuelle via les loyers.
             </p>
         </div>
+
+        <div class="footer">
+            <p>Copyright</p>
+        </div>
     </div>
 
+    <footer>
+    </footer>
 </body>
-<footer>
-    <script src="./script.js"></script>
-</footer>
+<script defer src="./env.js"></script>
+<script defer src="./script.js"></script>
 </html>

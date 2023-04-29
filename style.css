@@ -23,15 +23,13 @@ html{
 }
 body{
     background-color: rgb(var(--background));
-    display: grid;
-    grid-template-columns: repeat(15,1fr);
-    grid-gap: 10px;
+    display: flex;
+    padding:10px;
     text-align: justify;
 }
 
 .title{
     font-family:'Times New Roman', Times, serif;
-    grid-column: 2 / 15;
     color:rgb(var(--text));
 }
 
@@ -113,6 +111,7 @@ body{
 
 
 .chat{
+    align-self: flex-end;
     display:flex;
     flex-direction: column;
     margin:0 auto;
@@ -125,14 +124,12 @@ body{
     display:flex;
     flex-direction: column;
     gap:10px;
-    max-height: 480px;
     scroll-behavior: smooth;
     text-align: left;
     overflow: auto;
 }
 
 .question{
-    visibility: hidden;
     max-width: 75%;
     color:white;
     background:rgb(var(--question-bg));
@@ -141,12 +138,10 @@ body{
     width:fit-content;
     padding: 0 1em;
     margin: 0 0 0 auto;
-    animation: slide-in-left 0.5s ease-in forwards;
 }
 
 
 .answer{
-    visibility: hidden;
     max-width: 75%;
     color:black;
     background:rgb(var(--answer-bg));
@@ -155,33 +150,8 @@ body{
     width:fit-content;
     padding: 0 1em;
     margin: 0;
-    animation: slide-in-right 0.5s 1s ease-in forwards;
 }
 
-
-@keyframes slide-in-right{
-    0%{
-        visibility:visible;
-        opacity: 0;
-        transform: translateY(100%) translateX(-25%);
-    }
-    100%{
-        visibility:visible;
-        opacity: 1;
-    }
-}
-
-@keyframes slide-in-left{
-    0%{
-        visibility:visible;
-        opacity: 0;
-        transform: translateY(100%) translateX(25%);
-    }
-    100%{
-        visibility:visible;
-        opacity: 1;
-    }
-}
 
 .send-message{
     display:flex;
@@ -231,7 +201,6 @@ body{
     display: inline-block;
     position: absolute;
     top: 0;
-    background:red;
 }
 
 .loader::before {

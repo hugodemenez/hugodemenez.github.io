@@ -116,6 +116,10 @@ function sendMessage(){
             Tes réponses vont être affichées sur un site internet.
             Fais des passages à la ligne afin d'offrir une réponse clair et aérée.
             N'hésite pas à faire des bullet points dans tes réponses.
+            Indique aux clients qu'il est possible de prendre rendez-vous avec Monsieur MARTEL dans le but d'avoir un conseil personnalisé.
+            Monsieur MARTEL est un gestionnaire de patrimoine expert dans son domaine.
+            Il gère le cabinet : Expert & Patrimoine dans le Nord de la France.
+            A la fin de chaque message redirige les clients vers le site : https://expertetpatrimoine.com/
             `
         }
     );
@@ -173,7 +177,7 @@ function sendMessage(){
     answer.className = "answer";
     answer.innerHTML = `<div class="loader"></div>`;
     discussion.append(answer);
-
+    window.scrollTo(0, document.body.scrollHeight);
 
     // Send the request to the GPT model
     fetch(
@@ -186,7 +190,7 @@ function sendMessage(){
                 },
                 body: JSON.stringify({
                     'model': 'gpt-3.5-turbo',
-                    'max_tokens': 150,
+                    // 'max_tokens': 150,
                     'messages': messagesHistory,
                     'temperature': 0.7
                 })
@@ -232,6 +236,7 @@ function sendMessage(){
                             answerContent.innerHTML += word+" ";
                         },delay)
                         delay += randomTimeout;
+                        window.scrollTo(0, document.body.scrollHeight);
                     }
                 );
             });
@@ -254,18 +259,3 @@ window.addEventListener('load',
         textarea.style.height = Math.min(textarea.scrollHeight, 240) + 'px';
     }
 );
-
-
-text = `Pas de problème, je peux vous aider à remplir votre déclaration d'impôt. Voici quelques conseils pour vous guider dans cette démarche :
-
-1. Rassemblez tous les documents nécessaires : avant de commencer la déclaration, assurez-vous d'avoir tous les documents nécessaires à portée de main, tels que votre avis d'imposition de l'année dernière, vos relevés de comptes bancaires et d'investissement, ainsi que tous les justificatifs de dépenses déductibles.
-
-2. Identifiez les revenus à déclarer : vous devez déclarer tous les revenus perçus au cours de l'année fiscale, y compris les salaires, les revenus fonciers, les rentes, les revenus de capitaux mobiliers, etc.
-
-3. Identifiez les dépenses déductibles : vous pouvez déduire certaines dépenses de vos revenus imposables, telles que les frais de garde d'enfants, les dons aux associations, les frais de santé, etc.
-
-4. Utilisez les bons formulaires : il existe différents formulaires pour déclarer vos revenus en fonction de votre situation fiscale, tels que le formulaire 2042 pour les revenus courants, le formulaire 2044 pour les revenus fonciers, etc.
-
-5. Vérifiez et validez votre déclaration : une fois que vous avez rempli tous les formulaires, vérifiez bien que toutes les informations sont correctes avant de valider votre déclaration.
-
-Si vous avez des doutes ou des questions spécifiques concernant votre déclaration d'impôt, n'hésitez pas à contacter un expert-comptable ou un conseiller en gestion de patrimoine pour obtenir de l'aide et des conseils personnalisés.`

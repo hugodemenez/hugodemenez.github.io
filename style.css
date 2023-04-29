@@ -19,22 +19,30 @@
 }
 
 html{
-    display: flex;
+    display:flex;
+    height:100%;
 }
+
+html,body{
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
 body{
+    flex:1;
     background-color: rgb(var(--background));
     display: flex;
     padding:10px;
     text-align: justify;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap:1rem;
 }
 
 .title{
     font-family:'Times New Roman', Times, serif;
     color:rgb(var(--text));
-}
-
-.hamburger{
-    display:none;
 }
 
 .caroussel{
@@ -44,77 +52,23 @@ body{
     overflow-x:scroll;
     scroll-snap-type: x mandatory;
     padding:10px;
+    box-sizing: border-box;
+    width:100%;
+    flex-shrink: 0;
 }
 
 .caroussel img{
-    width:80%;
+    /* width:250px;
+    height: 250px; */
+    object-fit: cover;
     scroll-snap-align: center;
 }
 
 
-.content{
-    font-family: 'Inter', serif;
-    grid-column: 2 / 15;
-    font-size:medium;
-}
-
-.readingHighlight{
-    color: rgb(var(--text));;
-}
-
-.ctaContainer{
-    display:flex;
-    flex-direction: row;
-    gap:1rem;
-    width:100%;
-    overflow:hidden;
-}
-
-.cta{
-    text-decoration: none;
-    border:none;
-    background:rgb(var(--accent));
-    color:rgb(var(--background));
-    font-family:'Times New Roman', Times, serif;
-    padding: 1em;
-    width:10rem;
-    border-radius: 12px;
-    flex-shrink: 0;
-}
-
-.number{
-    border:none;
-    background:lightgray;
-    padding: 1em;
-    border-radius: 12px;
-    width:100%;
-    display:none;
-}
-
-.open_animation{
-    display:flex;
-    flex-shrink: 3;
-    animation-name: open;
-    animation-duration: 1s ;
-}
-
-
-/* The animation code */
-@keyframes open {
-    from {width: 0%;}
-    to {width: 100%;}
-}
-
-.footer{
-    height: 1000px;
-}
-
-
 .chat{
-    align-self: flex-end;
+    margin-top:auto;
     display:flex;
     flex-direction: column;
-    margin:0 auto;
     gap:10px;
 }
 

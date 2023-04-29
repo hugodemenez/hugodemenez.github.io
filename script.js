@@ -192,7 +192,7 @@ function sendMessage(){
                     'model': 'gpt-3.5-turbo',
                     // 'max_tokens': 150,
                     'messages': messagesHistory,
-                    'temperature': 0.7
+                    'temperature': 0.9
                 })
             }
         ),
@@ -245,6 +245,7 @@ function sendMessage(){
             console.log("error",response)
         } 
     });
+    
 }
 
 function stopMessage(){

@@ -18,11 +18,6 @@
     }   
 }
 
-html{
-    display:flex;
-    height:100%;
-}
-
 html,body{
     width:100%;
     padding:0;
@@ -30,9 +25,8 @@ html,body{
 }
 
 body{
-    flex:1;
-    background-color: rgb(var(--background));
     display: flex;
+    background-color: rgb(var(--background));
     padding:10px;
     text-align: justify;
     flex-direction: column;
@@ -104,6 +98,8 @@ body{
     width:fit-content;
     padding: 0 1em;
     margin: 0;
+    min-height: 32px;
+    min-width: 50px;
 }
 
 
@@ -139,6 +135,7 @@ body{
 }
 
 .loader {
+    align-self: center;
     position: relative;
     margin-left: 15px;
     width: 10px;
@@ -155,6 +152,7 @@ body{
     display: inline-block;
     position: absolute;
     top: 0;
+
 }
 
 .loader::before {
@@ -177,6 +175,6 @@ body{
         background: rgb(var(--accent));
     }
     50%, 100% {
-        background: rgba(var(--accent) 0.1);
+        background: rgba(var(--accent) 0.5);
     }
 }

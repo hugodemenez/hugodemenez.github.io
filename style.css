@@ -14,7 +14,7 @@
         --text : 255 255 255;
         --accent:31 138 255;
         --question-bg:31 138 255;
-        --answer-bg : 100 100 100;
+        --answer-bg : 235 235 235;
     }   
 }
 
@@ -210,7 +210,7 @@ body{
     background:none;
     padding: 0 1em;
     font-size:medium;
-    stroke:black;
+    stroke:rgb(var(--text));
     stroke-width: 2px;
 }
 

@@ -19,7 +19,13 @@ window.addEventListener('load',
                 }
                 else{
                     // Restart scroll to start
-                    carouselContainer.scrollTo(0, 0);
+                    carouselContainer.scroll(
+                        {
+                            top:0,
+                            left:0,
+                            behavior:"smooth"
+                        }
+                    );
                 }
             },3000
         );
@@ -80,11 +86,15 @@ const textarea = document.querySelector('.text-input');
 const controller = new AbortController();
 const signal = controller.signal;
 
-// Auto resize
+// Auto resize text area
+function resizeTextArea(){
+    textarea.style.height = "auto"; // This is to reset height
+    textarea.style.height = Math.min(textarea.scrollHeight, 240) + 'px';
+}
+
 textarea
     .addEventListener('input', function() {
-        this.style.height = "auto"; // This is to reset height
-        this.style.height = Math.min(this.scrollHeight, 240) + 'px';
+        resizeTextArea();
     }
 );
 textarea.addEventListener('keypress', function(event) {
@@ -205,6 +215,7 @@ function sendMessage(){
             response.json().then(data => {
                 console.log(data);
                 textarea.value = ""; // Clear textarea
+                resizeTextArea(); // Resize textarea
                 // Remove the stop message applied to button
                 sendButton.removeEventListener("click", stopMessage);
 
@@ -234,9 +245,10 @@ function sendMessage(){
                         const randomTimeout = Math.random()*(100-25)+25;
                         setTimeout(()=>{
                             answerContent.innerHTML += word+" ";
+                            window.scrollTo(0, document.body.scrollHeight);
                         },delay)
                         delay += randomTimeout;
-                        window.scrollTo(0, document.body.scrollHeight);
+                        
                     }
                 );
             });
@@ -249,7 +261,7 @@ function sendMessage(){
 }
 
 function stopMessage(){
-    controller.abort();
+    // controller.abort();
 }
 
 sendButton.addEventListener("click", sendMessage);

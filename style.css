@@ -25,6 +25,7 @@ html,body{
 }
 
 body{
+    overflow-y: auto;
     display: flex;
     background-color: rgb(var(--background));
     padding:10px;
@@ -32,7 +33,9 @@ body{
     flex-direction: column;
     box-sizing: border-box;
     gap:1rem;
+    position: relative;
 }
+
 
 .title{
     font-family:'Times New Roman', Times, serif;
@@ -53,10 +56,9 @@ body{
 }
 
 .caroussel img{
-    /* width:250px;
-    height: 250px; */
-    object-fit: cover;
+    width:200px;
     scroll-snap-align: center;
+    border-radius: 15px;
 }
 
 
@@ -105,8 +107,14 @@ body{
 
 
 .send-message{
+    box-sizing: border-box;
+    position:sticky;
+    bottom: 10px;
+    width: 100%;
     display:flex;
-    background:rgb(var(--background));
+    background: rgba( 255, 255, 255, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
     outline: solid 1px rgb(var(--outline));
     align-items: center;
     padding:10px;

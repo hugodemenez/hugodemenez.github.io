@@ -1,4 +1,4 @@
-# My github page ```HTMX```
+# My github page using ```HTMX```
 
 HTMX offers a lot of flexibility on serverless application.
 

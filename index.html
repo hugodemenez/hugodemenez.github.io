@@ -6,67 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLOBE</title>
     <style>
-        body {
-            overflow: hidden;
+        html,body {
+            height: 100vh;
             max-width: 393px;
-            max-height: 852px;
             position: relative;
             margin: 0 auto;
+            overflow: hidden;
+            box-sizing: border-box;
+            display:flex;
+            flex-direction: column;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             padding: 15px 15px;
+            position: sticky;
+            z-index: 2;
         }
 
         main {
             display: flex;
+            flex: 1;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             padding: 0 15px;
-            overflow-y: auto;
-            overflow-x: hidden;
+            box-sizing: border-box;
+            overflow-y: scroll;
         }
 
         .spacer {
             border: solid 1px black;
-            width: 100%;
+            width: 80%;
             margin: 15px 0;
         }
 
         .menu {
+            z-index: 1;
             width: 80%;
-            height: 100vh;
+            height: 100%;
             position: absolute;
             background-color: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             padding: 0;
-            margin: -10px;
             display: none;
+        }
+        .visible{
+            display: block;
         }
     </style>
 </head>
 
 <body>
     <script>
-        function openOverlay() {
-            document.querySelector(".menu").style.display = "block";
-        }
-        function closeOverlay() {
-            document.querySelector(".menu").style.display = "none";
+        function toggleOverlay() {
+            document.querySelector(".menu").classList.toggle("visible");
         }
     </script>
+    <div class="menu">
+    </div>
     <nav>
-        <div class="menu">
-                <div class="close" style="width:25px;height: 25px; margin-top:20px; position: relative;" onclick="closeOverlay()">
-                    <div style="border:solid 1px black; width: 25px;position:absolute;transform:  rotate(45deg) translateY(10px) translateX(10px);"></div>
-                    <div style="border:solid 1px black; width: 25px;position:absolute;transform:  rotate(-45deg) translateY(10px) translateX(-10px);"></div>
-                </div>
-        </div>
-        <img src="assets/Hamburger.svg" alt="Menu" onclick="openOverlay()">
+        <img src="assets/Hamburger.svg" alt="Menu" onclick="toggleOverlay()">
         <svg width="363" height="25" viewBox="0 0 363 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M95.9545 8.74213C95.7955 8.1891 95.572 7.70046 95.2841 7.27622C94.9962 6.8444 94.6439 6.48076 94.2273 6.18531C93.8182 5.88228 93.3485 5.65122 92.8182 5.49213C92.2955 5.33304 91.7159 5.25349 91.0795 5.25349C89.8902 5.25349 88.8447 5.54894 87.9432 6.13985C87.0492 6.73076 86.3523 7.59061 85.8523 8.7194C85.3523 9.84061 85.1023 11.2118 85.1023 12.833C85.1023 14.4542 85.3485 15.833 85.8409 16.9694C86.3333 18.1058 87.0303 18.9732 87.9318 19.5717C88.8333 20.1626 89.8977 20.458 91.125 20.458C92.2386 20.458 93.1894 20.2611 93.9773 19.8671C94.7727 19.4656 95.3788 18.9012 95.7955 18.1739C96.2197 17.4467 96.4318 16.5868 96.4318 15.5944L97.4318 15.7421H91.4318V12.0376H101.17V14.9694C101.17 17.0149 100.739 18.7724 99.875 20.2421C99.0114 21.7042 97.822 22.833 96.3068 23.6285C94.7917 24.4164 93.0568 24.8103 91.1023 24.8103C88.9205 24.8103 87.0038 24.3292 85.3523 23.3671C83.7008 22.3974 82.4129 21.0224 81.4886 19.2421C80.572 17.4542 80.1136 15.333 80.1136 12.8785C80.1136 10.9921 80.3864 9.31031 80.9318 7.83303C81.4848 6.34819 82.2576 5.09061 83.25 4.06031C84.2424 3.03 85.3977 2.24591 86.7159 1.70803C88.0341 1.17016 89.4621 0.901217 91 0.901217C92.3182 0.901217 93.5455 1.0944 94.6818 1.48076C95.8182 1.85955 96.8258 2.39743 97.7045 3.0944C98.5909 3.79137 99.3144 4.62091 99.875 5.58303C100.436 6.53758 100.795 7.59061 100.955 8.74213H95.9545ZM108.066 24.4921V1.2194H112.987V20.4353H122.964V24.4921H108.066Z"
@@ -82,15 +83,27 @@
         <img src="assets/User.svg" alt="User">
     </nav>
     <main>
-        <img src="assets/headerPicture.png" alt="Picture of XRP crypto asset">
+        <img width=80% src="assets/headerPicture.png" alt="Picture of XRP crypto asset">
         <span class="spacer"></span>
         <h1>
             XRP Market Buzz and Developments
         </h1>
         <span class="spacer"></span>
         <p>The XRP crypto market is abuzz with recent news and developments. In this article, we'll explore various
+        <p>The XRP crypto market is abuzz with recent news and developments. In this article, we'll explore various
+        <p>The XRP crypto market is abuzz with recent news and developments. In this article, we'll explore various
             aspects of XRP's journey, from allegations of centralization to technical analysis and community-driven
             innovations.</p>
+        <p>Overall, while Bitcoin remains the largest and most well-known cryptocurrency, XRP offers several advantages
+            that may make it more appealing to some investors, particularly those who
+            need to make frequent international transactions or operate in large-scale enterprises.</p>
+        aspects of XRP's journey, from allegations of centralization to technical analysis and community-driven
+        innovations.</p>
+        <p>Overall, while Bitcoin remains the largest and most well-known cryptocurrency, XRP offers several advantages
+            that may make it more appealing to some investors, particularly those who
+            need to make frequent international transactions or operate in large-scale enterprises.</p>
+        aspects of XRP's journey, from allegations of centralization to technical analysis and community-driven
+        innovations.</p>
         <p>Overall, while Bitcoin remains the largest and most well-known cryptocurrency, XRP offers several advantages
             that may make it more appealing to some investors, particularly those who
             need to make frequent international transactions or operate in large-scale enterprises.</p>

@@ -8,7 +8,8 @@
     <style>
         html,body {
             height: 100dvh;
-            max-width: 393px;
+            max-width: 2400px;
+            padding:0 1rem;
             position: relative;
             margin: 0 auto;
             overflow: hidden;
@@ -16,97 +17,24 @@
             display:flex;
             flex-direction: column;
         }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 15px;
-            position: sticky;
-            z-index: 2;
-        }
-
-        main {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            align-items: center;
-            padding: 0 15px;
-            box-sizing: border-box;
-            overflow-y: scroll;
-        }
-
-        .spacer {
-            border: solid 1px black;
-            width: 80%;
-            margin: 15px 0;
-        }
-
-        .menu {
-            z-index: 1;
-            width: 80%;
-            height: 100%;
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            padding: 0;
-            display: none;
-        }
-        .visible{
-            display: block;
-        }
     </style>
-</head>
+</head>∏
 
 <body>
-    <script>
-        function toggleOverlay() {
-            document.querySelector(".menu").classList.toggle("visible");
-        }
-    </script>
-    <div class="menu">
-    </div>
-    <nav>
-        <img src="assets/Hamburger.svg" alt="Menu" onclick="toggleOverlay()">
-        <svg width="363" height="25" viewBox="0 0 363 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M95.9545 8.74213C95.7955 8.1891 95.572 7.70046 95.2841 7.27622C94.9962 6.8444 94.6439 6.48076 94.2273 6.18531C93.8182 5.88228 93.3485 5.65122 92.8182 5.49213C92.2955 5.33304 91.7159 5.25349 91.0795 5.25349C89.8902 5.25349 88.8447 5.54894 87.9432 6.13985C87.0492 6.73076 86.3523 7.59061 85.8523 8.7194C85.3523 9.84061 85.1023 11.2118 85.1023 12.833C85.1023 14.4542 85.3485 15.833 85.8409 16.9694C86.3333 18.1058 87.0303 18.9732 87.9318 19.5717C88.8333 20.1626 89.8977 20.458 91.125 20.458C92.2386 20.458 93.1894 20.2611 93.9773 19.8671C94.7727 19.4656 95.3788 18.9012 95.7955 18.1739C96.2197 17.4467 96.4318 16.5868 96.4318 15.5944L97.4318 15.7421H91.4318V12.0376H101.17V14.9694C101.17 17.0149 100.739 18.7724 99.875 20.2421C99.0114 21.7042 97.822 22.833 96.3068 23.6285C94.7917 24.4164 93.0568 24.8103 91.1023 24.8103C88.9205 24.8103 87.0038 24.3292 85.3523 23.3671C83.7008 22.3974 82.4129 21.0224 81.4886 19.2421C80.572 17.4542 80.1136 15.333 80.1136 12.8785C80.1136 10.9921 80.3864 9.31031 80.9318 7.83303C81.4848 6.34819 82.2576 5.09061 83.25 4.06031C84.2424 3.03 85.3977 2.24591 86.7159 1.70803C88.0341 1.17016 89.4621 0.901217 91 0.901217C92.3182 0.901217 93.5455 1.0944 94.6818 1.48076C95.8182 1.85955 96.8258 2.39743 97.7045 3.0944C98.5909 3.79137 99.3144 4.62091 99.875 5.58303C100.436 6.53758 100.795 7.59061 100.955 8.74213H95.9545ZM108.066 24.4921V1.2194H112.987V20.4353H122.964V24.4921H108.066Z"
-                fill="black" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M136.008 1.49213C129.652 1.49213 124.5 6.64438 124.5 13C124.5 19.3556 129.652 24.5079 136.008 24.5079H228.992C235.348 24.5079 240.5 19.3556 240.5 13C240.5 6.64438 235.348 1.49213 228.992 1.49213H136.008ZM153.544 6.21357C149.654 6.21357 146.5 9.3671 146.5 13.2572C146.5 17.1473 149.654 20.3008 153.544 20.3008H210.456C214.346 20.3008 217.5 17.1473 217.5 13.2572C217.5 9.3671 214.346 6.21357 210.456 6.21357H153.544Z"
-                fill="black" />
-            <path
-                d="M242.523 24.4921V1.2194H251.841C253.553 1.2194 254.981 1.47319 256.125 1.98076C257.269 2.48834 258.129 3.19288 258.705 4.0944C259.28 4.98834 259.568 6.01864 259.568 7.18531C259.568 8.0944 259.386 8.89364 259.023 9.58304C258.659 10.2649 258.159 10.8255 257.523 11.2649C256.894 11.6967 256.174 12.0035 255.364 12.1853V12.4126C256.25 12.4505 257.08 12.7005 257.852 13.1626C258.633 13.6247 259.265 14.2724 259.75 15.1058C260.235 15.9315 260.477 16.9164 260.477 18.0603C260.477 19.2952 260.17 20.3974 259.557 21.3671C258.951 22.3292 258.053 23.0906 256.864 23.6512C255.674 24.2118 254.208 24.4921 252.466 24.4921H242.523ZM247.443 20.4694H251.455C252.826 20.4694 253.826 20.208 254.455 19.6853C255.083 19.155 255.398 18.4505 255.398 17.5717C255.398 16.9277 255.242 16.3596 254.932 15.8671C254.621 15.3747 254.178 14.9883 253.602 14.708C253.034 14.4277 252.356 14.2876 251.568 14.2876H247.443V20.4694ZM247.443 10.958H251.091C251.765 10.958 252.364 10.8406 252.886 10.6058C253.417 10.3633 253.833 10.0224 254.136 9.58304C254.447 9.14364 254.602 8.61713 254.602 8.00349C254.602 7.16258 254.303 6.48455 253.705 5.9694C253.114 5.45425 252.273 5.19667 251.182 5.19667H247.443V10.958ZM266.879 24.4921V1.2194H282.561V5.27622H271.799V10.8217H281.754V14.8785H271.799V20.4353H282.606V24.4921H266.879Z"
-                fill="black" />
-        </svg>
-
-        <img src="assets/User.svg" alt="User">
-    </nav>
     <main>
-        <img width=80% src="assets/headerPicture.png" alt="Picture of XRP crypto asset">
         <span class="spacer"></span>
         <h1>
             XRP Market Buzz and Developments
         </h1>
         <span class="spacer"></span>
-        <p>The XRP crypto market is abuzz with recent news and developments. In this article, we'll explore various
-        <p>The XRP crypto market is abuzz with recent news and developments. In this article, we'll explore various
-        <p>The XRP crypto market is abuzz with recent news and developments. In this article, we'll explore various
+        <p>
+            Copilot is very impressive.
+        </p>
+        <p>
+            The XRP crypto market is abuzz with recent news and developments. In this article, we'll explore various
             aspects of XRP's journey, from allegations of centralization to technical analysis and community-driven
-            innovations.</p>
-        <p>Overall, while Bitcoin remains the largest and most well-known cryptocurrency, XRP offers several advantages
-            that may make it more appealing to some investors, particularly those who
-            need to make frequent international transactions or operate in large-scale enterprises.</p>
-        aspects of XRP's journey, from allegations of centralization to technical analysis and community-driven
-        innovations.</p>
-        <p>Overall, while Bitcoin remains the largest and most well-known cryptocurrency, XRP offers several advantages
-            that may make it more appealing to some investors, particularly those who
-            need to make frequent international transactions or operate in large-scale enterprises.</p>
-        aspects of XRP's journey, from allegations of centralization to technical analysis and community-driven
-        innovations.</p>
-        <p>Overall, while Bitcoin remains the largest and most well-known cryptocurrency, XRP offers several advantages
-            that may make it more appealing to some investors, particularly those who
-            need to make frequent international transactions or operate in large-scale enterprises.</p>
+            innovations.
+        </p>
     </main>
 </body>
 

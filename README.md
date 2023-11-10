@@ -16,6 +16,7 @@ I don't want to copy, and I would like to get something quite unique.
 My goal is to have LLM post generation, based on my unorganized and chaotic thoughts.
 
 The architecture is the following one :
-- Frontend built with htmx elements that auto fetch posts on scroll
+- Frontend built with htmx elements that auto fetch posts on scroll designed using tailwind css
 - Backend hosted on open source platform that uses edge functions to build posts based on thoughts, adding images and so on 
 - I should also have a way to interact with the backend in a nice interface that let my words flows (admin dashboard or somewhat)
+
